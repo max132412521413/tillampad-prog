@@ -90,7 +90,10 @@ void servoWrite(float value) {
   myservo.write(map(value * 100, 1500, 3500, 0, 179));
 }
 
-
+/* En funktion för flkäten att fungera. När temperaturen över stiger 27 startar fläkten. 
+*
+*
+*/
 void fan() {
   if (rtc.getTemperature() >= 27) {
     digitalWrite(10, HIGH);
